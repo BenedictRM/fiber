@@ -3,12 +3,14 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
+  //entry tell you which file is the entry point
   entry: {
     app : [
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
       './lib/index.js'],
   },
+  // compile the bundle in /public/js/ directory under name 'app.js'
   output: {
     path: path.join(__dirname, './public/js/'),
     filename: `app.js`,
@@ -32,6 +34,7 @@ module.exports = {
   module: {    
     loaders: [
     {
+      // run babel on all files end in .js but only in our directory not in /node_modules/
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
       exclude: /node_modules/,
