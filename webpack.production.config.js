@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-
+//Make encapsulated data available to other files
 module.exports = {
   entry: {
     app : [

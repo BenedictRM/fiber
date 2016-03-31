@@ -3,7 +3,7 @@ var webpack = require('webpack');
 //Make encapsulated data available to other files
 module.exports = {
   devtool: 'eval',
-  //entry tell you which file is the entry point
+  //entry tell you which file is the entry point, since we're loading an array all modules are loaded, last is exported
   entry: {
     app : [
       'webpack-dev-server/client?http://localhost:3000', //Set module data location to localhost 3000 for use there
