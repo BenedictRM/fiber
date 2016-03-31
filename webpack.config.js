@@ -17,7 +17,7 @@ module.exports = {
     publicPath: '/js/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin() //exchanges, adds, or removes modules while an application is running without a page reload
   ],
   node: {
     fs: "empty"
