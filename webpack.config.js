@@ -6,7 +6,7 @@ module.exports = {
   //entry tell you which file is the entry point
   entry: {
     app : [
-      'webpack-dev-server/client?http://localhost:3000', //Set module data location to localhost 3000
+      'webpack-dev-server/client?http://localhost:3000', //Set module data location to localhost 3000 for use there
       'webpack/hot/only-dev-server', // This allows for compnent reload without page reload
       './lib/index.js'],
   },
