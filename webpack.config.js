@@ -16,39 +16,42 @@ module.exports = {
     filename: `app.js`,
     publicPath: '/js/'
   },
-  plugins: [
+  plugins: [ //Add additional plugins to the compiler
     new webpack.HotModuleReplacementPlugin() //exchanges, adds, or removes modules while an application is running without a page reload
   ],
   node: {
-    fs: "empty"
+    fs: "empty" //load chunks asynchronously (I think)
   },
-  resolve: {
+  resolve: { //Set options for resolving modules
     alias: {
       'react': path.join(__dirname, 'node_modules', 'react')
     },
     extensions: ['', '.js']
   },
-  resolveLoader: {
+  resolveLoader: { //Set options for resolving Loaders
     'fallback': path.join(__dirname, 'node_modules')
   },
   module: {    
-    loaders: [
+    loaders: [ // An array of automatically applied loaders
     {
       // run babel on all files end in .js but only in our directory not in /node_modules/
-      test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
-      exclude: /node_modules/,
-      include: [path.join(__dirname,'./lib')]
+      test: /\.js$/, // "test" to match the file extension
+      loaders: ['react-hot', 'babel'], //The loaders themselves
+      exclude: /node_modules/, // "exclude" to exclude exceptions in file path
+      include: [path.join(__dirname,'./lib')] //"include" to match the directories
     },
     {
+	  //Find all xml file extensions and load as raw
       test: /\.xml$/,
       loader: "raw"
     },
     {
+	  //find all json file extensions and load with json-loader
       test: /\.json$/,
       loaders: ['json-loader']
     },
     {
+	  //find all css file extensions and load with raw in root directory
       test: /\.css?$/,
       loaders: ['style', 'raw'],
       include: __dirname
