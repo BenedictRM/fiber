@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     app : [
       'webpack-dev-server/client?http://localhost:3000',
-      'webpack/hot/only-dev-server',
+      'webpack/hot/only-dev-server', // This allows for compnent reload without page reload
       './lib/index.js'],
   },
   // compile the bundle in /public/js/ directory under name 'app.js'
