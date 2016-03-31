@@ -1,12 +1,12 @@
 var path = require('path');
 var webpack = require('webpack');
-
+//Make encapsulated data available to other files
 module.exports = {
   devtool: 'eval',
   //entry tell you which file is the entry point
   entry: {
     app : [
-      'webpack-dev-server/client?http://localhost:3000',
+      'webpack-dev-server/client?http://localhost:3000', //Set module data to localhost 3000
       'webpack/hot/only-dev-server', // This allows for compnent reload without page reload
       './lib/index.js'],
   },
