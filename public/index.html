@@ -9,16 +9,51 @@
 	<link rel="stylesheet" href="/lib/leaflet-routing-machine/css/leaflet-routing-machine.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body>
+  <body background = "pic.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <ul id="teamDropdown" class="dropdown-content">
+     <li>Russell Mehring</li>
+     <li> Lili Ji</li>
+     <li>Hui-Min Lu</li>
+     <li>Yen-Teh Liu</li>
+   </ul>
     <nav>
      <div class="nav-wrapper light-green">
        <a href="#" class="brand-logo center">Fiber</a>
+       <ul class="right hide-on-med-and-down">
+     <li><a class="dropdown-button" href="#!" data-activates="teamDropdown">Team Members<i class="material-icons right">arrow_drop_down</i></a></li>
+     </ul>
      </div>
    </nav>
+
+
+
    <div class="container">
      <div id="react"></div>
+ </div>
    </div>
+   <div class="container">
+    <div class="row">
+     <div class="col 12 m12">
+    <div class="card light-green">
+       <div class="card waves-effect waves-block waves-light">
+       </div>
+       <div class="card-content">
+         <span class="card-title activator white-text">About Us<i class="material-icons right">more_vert</i></span>
+       </div>
+       <div class="card-reveal">
+         <span class="card-title grey-text text-darken-4"><a href="https://github.com/BenedictRM/fiber">Team Github</a><i class="material-icons right">close</i></span>
+         <p>© Copyright, Zayo 2016</p>
+       </div>
+     </div>
+   </div>
+    </div>
+</div>
    <script src="js/app.js"></script>
    <script src="/lib/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+      <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.min.js"></script>
   </body>
 </html>
